@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./index.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+</head>
+
+<body>
+  <!-- Set scoped state with x-data -->
+  <div x-data="{count:23}" class="max-w-sm m-8 font-mono space-y-6">
+    <h2 class="text-xl leading-tight">Everything-in-HTML 🙀</h2>
+    <div class="p-6 shadow-xl rounded-md bg-purple-900 flex justify-between items-center">
+
+      <!-- add onClick event listener with @click -->
+      <button @click="count++"
+        class="bg-purple-200 text-purple-900 hover:bg-purple-300 py-2 px-4 rounded-sm text-md font-bold font-mono">Increment</button>
+
+      <!-- Bind the "count" value with x-text -->
+      <div x-text="count" class="text-white text-5xl font-black"></div>
+    </div>
+
+    <!-- reset value to 0 on click -->
+    <button @click="count = 0"
+      class="bg-gray-300 hover:bg-gray-400 text-gray-900 py-1 px-3 text-sm shadow font-mono">reset</button>
+  </div>
+</body>
+
+</html>
